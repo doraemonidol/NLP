@@ -176,7 +176,7 @@ class Crawler:
 
 def automatic_crawl(links, file_name):
     c = Crawler()
-    i = 1066
+    i = 1
     try:
         for _ in range(5000):
             while i <= len(links):
@@ -198,10 +198,12 @@ def automatic_crawl(links, file_name):
     except:
         c.save(file_name)
 
-with open("3.txt", "r", encoding='utf-8') as f:
+with open("0.txt", "r", encoding='utf-8') as f:
     list_of_poems = f.readlines()
     links = [poem.split("\t")[-1].strip() for poem in list_of_poems]
 
 print(links)
 
-automatic_crawl(links, "thivien_3.json")
+automatic_crawl(links, "thivien_0.json")
+
+
